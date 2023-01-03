@@ -6,7 +6,8 @@ const Home = () => {
   return (
     <Container
       id="home"
-      width="100%"
+      width="80%"
+      margin="auto"
       display="flex"
       padding="100px 0 100px 0"
       height="calc(100vh - 72px)"
