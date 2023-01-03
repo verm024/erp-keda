@@ -13,9 +13,9 @@ interface Props {
 const Card = styled(Container)`
   border-radius: 15px;
   width: 250px;
-  border: 1px solid;
-  height: 400px;
+  height: 450px;
   overflow: auto;
+  background: white;
 `;
 
 const FeatureUl = styled.ul`
