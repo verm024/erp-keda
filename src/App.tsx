@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 import { Container } from "./components/atoms";
-import { Navbar } from "./components/molecules";
+import { Navbar, Footer } from "./components/molecules";
 import { Home, About, Pricing, Contact } from "./components/organisms";
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
         <Pricing />
         <Contact />
       </Container>
+      <Footer />
     </div>
   );
 }
