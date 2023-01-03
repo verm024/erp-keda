@@ -9,8 +9,8 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 const Root = styled.input<InputProps>`
   outline: none;
   padding: 6px 10px;
-  border-radius: 8px;
-  border: 1px solid;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
   font-size: 1rem;
   letter-spacing: 0.5px;
   width: ${({ width }) => width || "100px"};

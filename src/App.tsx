@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 
-import { Container, Textarea } from "./components/atoms";
+import { Container } from "./components/atoms";
 import { Navbar } from "./components/molecules";
-import { Home, About, Pricing } from "./components/organisms";
+import { Home, About, Pricing, Contact } from "./components/organisms";
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
         <Home />
         <About />
         <Pricing />
+        <Contact />
       </Container>
     </div>
   );
