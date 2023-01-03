@@ -3,7 +3,7 @@ import "./App.css";
 
 import { Container } from "./components/atoms";
 import { Navbar } from "./components/molecules";
-import { Home } from "./components/organisms";
+import { Home, About } from "./components/organisms";
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <Navbar />
       <Container width="80%" margin="auto">
         <Home />
+        <About />
       </Container>
     </div>
   );
