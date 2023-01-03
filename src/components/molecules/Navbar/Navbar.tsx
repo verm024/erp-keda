@@ -2,6 +2,8 @@ import React from "react";
 
 import styled from "styled-components";
 
+import { useNavigate, useLocation } from "react-router-dom";
+
 import { Container, Text, Button } from "../../atoms";
 
 const NavLink = styled.a`
@@ -18,6 +20,10 @@ const StyledButton = styled(Button)`
 `;
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   return (
     <Container
       width="90%"
@@ -28,7 +34,10 @@ const Navbar = () => {
       height="50px"
       padding="36px 0"
     >
-      <NavLink href="#home">
+      <NavLink
+        href={!isHomePage ? undefined : "#home"}
+        onClick={() => (!isHomePage ? navigate("/") : null)}
+      >
         <Text textType="h5" bold color="white">
           HOME
         </Text>
@@ -49,7 +58,7 @@ const Navbar = () => {
             CONTACT
           </Text>
         </ExtendedNavLink>
-        <StyledButton variant="secondary" onClick={() => alert("Login")}>
+        <StyledButton variant="secondary" onClick={() => navigate("/login")}>
           Login
         </StyledButton>
       </Container>
