@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import { Container } from "./components/atoms";
+import { Container, Textarea } from "./components/atoms";
 import { Navbar } from "./components/molecules";
 import { Home, About, Pricing } from "./components/organisms";
 
