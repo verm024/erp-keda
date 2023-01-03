@@ -22,7 +22,7 @@ const StyledButton = styled(Button)`
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const isLoginPage = location.pathname === "/login";
+  const isHomePage = location.pathname === "/";
 
   return (
     <Container
@@ -35,8 +35,8 @@ const Navbar = () => {
       padding="36px 0"
     >
       <NavLink
-        href={isLoginPage ? undefined : "#home"}
-        onClick={() => (isLoginPage ? navigate("/") : null)}
+        href={!isHomePage ? undefined : "#home"}
+        onClick={() => (!isHomePage ? navigate("/") : null)}
       >
         <Text textType="h5" bold color="white">
           HOME
