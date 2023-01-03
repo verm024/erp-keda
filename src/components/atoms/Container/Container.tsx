@@ -10,6 +10,7 @@ interface ContainerProps {
   flexDirection?: string;
   width?: string;
   height?: string;
+  minHeight?: string;
   margin?: string;
   padding?: string;
   textAlign?: string;
@@ -24,6 +25,7 @@ const ContainerDiv = styled.div<ContainerProps>`
   align-items: ${({ alignItems }) => alignItems || "stretch"};
   width: ${({ width }) => width || "fit-content"};
   height: ${({ height }) => height || "fit-content"};
+  ${({ minHeight }) => minHeight && `min-height: ${minHeight};`}
   margin: ${({ margin }) => margin || "0"};
   padding: ${({ padding }) => padding || "0"};
   flex-direction: ${({ flexDirection }) => flexDirection || "row"};
