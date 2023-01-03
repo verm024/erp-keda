@@ -5,7 +5,7 @@ import { AboutFeatureCard } from "../../molecules";
 
 const About = () => {
   return (
-    <Container id="about" width="100%" margin="100px 0 0 0">
+    <Container id="about" width="100%" margin="100px 0">
       <Text textAlign="center" textType="h4" bold color="#1F6AF7">
         ABOUT
       </Text>
