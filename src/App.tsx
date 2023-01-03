@@ -1,11 +1,13 @@
 import React from "react";
 import "./App.css";
-import { Text } from "./components/atoms";
+import { Text, Container } from "./components/atoms";
 
 function App() {
   return (
     <div className="App">
-      <Text textType="b2">Hello World</Text>
+      <Container width="80%" margin="auto">
+        <Text textType="b2">Hello World</Text>
+      </Container>
     </div>
   );
 }
