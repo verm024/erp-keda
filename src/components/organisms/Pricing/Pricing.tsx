@@ -2,6 +2,7 @@ import React from "react";
 
 import { Container, Spacer } from "../../atoms";
 import { PriceCard } from "../../molecules";
+import { useResponsive } from "../../../hooks";
 
 import styled from "styled-components";
 
@@ -18,6 +19,8 @@ const PriceCardContainer = styled(Container)`
 `;
 
 const Pricing = () => {
+  const { isDesktop } = useResponsive();
+
   const features = [
     {
       name: "basic",
@@ -64,14 +67,15 @@ const Pricing = () => {
       ></BackgroundContainer>
       <PriceCardContainer width="100%" textAlign="center">
         {features.map((feature, index) => (
-          <React.Fragment key={index}>
+          <Container display="inline-block" key={index}>
+            <Spacer inline={isDesktop} size={16} />
             <PriceCard
               level={feature.name}
               price={feature.price}
               features={feature.features}
             />
-            <Spacer inline size={16} />
-          </React.Fragment>
+            <Spacer inline={isDesktop} size={16} />
+          </Container>
         ))}
       </PriceCardContainer>
       <BackgroundContainer
