@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# ERP Homepage untuk KedaTech
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Homepage dari aplikasi ERP yang digunakan sebagai submisi untuk tech assignment di KeDa Tech
+
+## Tech Stack yang digunakan
+
+- ReactJS: Framework JS dengan basis pengguna terbesar di dunia membuat ReactJS menjadi lebih maintenanceable dan pengembangan kedepannya dapat lebih dipercaya (secara sederhana kemungkinan ReactJS mendapatkan pengembangan secara terus menerus oleh developernya di masa depan masih cukup besar).
+- Styled Components: Untuk membantu dan mempermudah dalam membuat dan mendesain suatu component, terutama untuk component yang sifatnya reusable. Penggunaan Styled Components membuat codebase tampak menjadi lebih readable apabila dibandingkan dengan penggunaan class dan id.
+- Typescript: Sebagai versi lebih type safety dari Javascript, di mana type safety akan membantu dalam mengurangi dan mengatasi error dan membuat kode menjadi lebih maintenanceable dalam jangka panjang.
+- ESLint dan Prettier: Untuk membantu proses code formatting sehingga kode menjadi lebih rapi dan proses coding menjadi lebih cepat.
+- React Responsive: Mempermudah dalam mengatur desain responsive.
 
 ## Available Scripts
 
