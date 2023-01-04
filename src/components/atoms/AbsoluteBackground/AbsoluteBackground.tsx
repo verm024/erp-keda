@@ -28,9 +28,6 @@ const Root = styled(Container)<Props>`
   background-size: 100% 100%;
 `;
 
-// background-size: ${({ backgroundWidth, backgroundHeight }) =>
-//     `${backgroundWidth || "100%"} ${backgroundHeight || "auto"}`};
-
 const AbsoluteBackground = ({ ...rest }: Props) => {
   return <Root {...rest} id="testtttt" />;
 };
