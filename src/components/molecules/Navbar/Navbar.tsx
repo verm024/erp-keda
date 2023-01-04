@@ -56,7 +56,12 @@ const Navbar = () => {
     >
       <NavLink
         href={!isHomePage ? undefined : "#home"}
-        onClick={() => (!isHomePage ? navigate("/") : null)}
+        onClick={() => {
+          if (!isHomePage) {
+            setIsMenuOpen(false);
+            navigate("/");
+          }
+        }}
       >
         <Text textType="h5" bold color="white">
           HOME
@@ -114,6 +119,16 @@ const Navbar = () => {
           <ResponsiveNavLink href="#contact">
             <Text textType="b2">Contact</Text>
           </ResponsiveNavLink>
+          {isHomePage && (
+            <ResponsiveNavLink
+              onClick={() => {
+                setIsMenuOpen(false);
+                navigate("/login");
+              }}
+            >
+              <Text textType="b2">Login</Text>
+            </ResponsiveNavLink>
+          )}
         </ResponsiveDropdownContainer>
       )}
     </Container>
