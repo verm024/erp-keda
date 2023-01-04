@@ -10,23 +10,29 @@ interface Props {
   right?: string;
   bottom?: string;
   left?: string;
-  height?: string;
-  width?: string;
+  backgroundHeight?: string;
+  backgroundWidth?: string;
 }
 
 const Root = styled(Container)<Props>`
   position: absolute;
-  height: ${({ height }) => height || "100%"};
-  width: ${({ width }) => width || "100%"};
+  z-index: -1000;
+  height: ${({ backgroundHeight }) => backgroundHeight || "100%"};
+  width: ${({ backgroundWidth }) => backgroundWidth || "100%"};
   top: ${({ top }) => top || "unset"};
   right: ${({ right }) => right || "unset"};
   bottom: ${({ bottom }) => bottom || "unset"};
   left: ${({ left }) => left || "unset"};
   background: ${({ background }) => background};
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 `;
 
+// background-size: ${({ backgroundWidth, backgroundHeight }) =>
+//     `${backgroundWidth || "100%"} ${backgroundHeight || "auto"}`};
+
 const AbsoluteBackground = ({ ...rest }: Props) => {
-  return <Root {...rest}></Root>;
+  return <Root {...rest} id="testtttt" />;
 };
 
 export default AbsoluteBackground;
