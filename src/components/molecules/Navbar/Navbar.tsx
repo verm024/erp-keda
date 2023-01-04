@@ -89,9 +89,11 @@ const Navbar = () => {
           </StyledButton>
         </Container>
       ) : (
-        <Container onClick={() => setIsMenuOpen(true)} padding="0 12px">
-          <Text textType="h4">=</Text>
-        </Container>
+        isHomePage && (
+          <Container onClick={() => setIsMenuOpen(true)} padding="0 12px">
+            <Text textType="h4">=</Text>
+          </Container>
+        )
       )}
       {(isMobile || isTablet) && isMenuOpen && (
         <ResponsiveDropdownContainer
@@ -119,16 +121,14 @@ const Navbar = () => {
           <ResponsiveNavLink href="#contact">
             <Text textType="b2">Contact</Text>
           </ResponsiveNavLink>
-          {isHomePage && (
-            <ResponsiveNavLink
-              onClick={() => {
-                setIsMenuOpen(false);
-                navigate("/login");
-              }}
-            >
-              <Text textType="b2">Login</Text>
-            </ResponsiveNavLink>
-          )}
+          <ResponsiveNavLink
+            onClick={() => {
+              setIsMenuOpen(false);
+              navigate("/login");
+            }}
+          >
+            <Text textType="b2">Login</Text>
+          </ResponsiveNavLink>
         </ResponsiveDropdownContainer>
       )}
     </Container>
