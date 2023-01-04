@@ -1,8 +1,11 @@
 import React from "react";
 
 import { Container, Text, Image, Spacer } from "../../atoms";
+import { useResponsive } from "../../../hooks";
 
 const Home = () => {
+  const { isDesktop } = useResponsive();
+
   return (
     <Container
       id="home"
@@ -14,8 +17,8 @@ const Home = () => {
       justifyContent="space-between"
       flexDirection="column"
     >
-      <Container width="70%" margin="0 25%">
-        <Text textAlign="center" textType="h6">
+      <Container width="70%" margin={isDesktop ? "0 25%" : "auto"}>
+        <Text textAlign="center" textType={isDesktop ? "h6" : "b1"}>
           Kelola semua proses bisnis perusahaan secara otomatis dengan perangkat
           ERPMa,
           <br />
@@ -26,13 +29,17 @@ const Home = () => {
         display="flex"
         flexDirection="column"
         alignItems="center"
-        margin="100px 0 0 0"
+        margin={isDesktop ? "100px 0 0 0" : "70px 0 0 0"}
+        width={isDesktop ? undefined : "100%"}
       >
-        <Text textType="h6" italic>
+        <Text textType={isDesktop ? "h6" : "b2"} italic>
           &ldquo;Solusi terdepan dalam otomatisasi bisnis&rdquo;
         </Text>
         <Spacer size={48} />
-        <Image src="/images/undraw_business_plan.png" width="400px" />
+        <Image
+          src="/images/undraw_business_plan.png"
+          width={isDesktop ? "400px" : "75%"}
+        />
       </Container>
     </Container>
   );

@@ -54,7 +54,7 @@ const Pricing = () => {
       width="width"
       minHeight="100vh"
       display="flex"
-      alignItems="center"
+      justifyContent="center"
       flexDirection="column"
     >
       <BackgroundContainer
@@ -64,14 +64,15 @@ const Pricing = () => {
       ></BackgroundContainer>
       <PriceCardContainer width="100%" textAlign="center">
         {features.map((feature, index) => (
-          <React.Fragment key={index}>
+          <Container display="inline-block" key={index}>
+            <Spacer inline size={16} />
             <PriceCard
               level={feature.name}
               price={feature.price}
               features={feature.features}
             />
             <Spacer inline size={16} />
-          </React.Fragment>
+          </Container>
         ))}
       </PriceCardContainer>
       <BackgroundContainer

@@ -10,6 +10,7 @@ import {
   Text,
   AbsoluteBackground,
 } from "../../components/atoms";
+import { useResponsive } from "../../hooks";
 
 const BackgroundContainer = styled(Container)`
   overflow: hidden;
@@ -19,6 +20,8 @@ const BackgroundContainer = styled(Container)`
 `;
 
 const Login = () => {
+  const { isDesktop } = useResponsive();
+
   return (
     <>
       <BackgroundContainer width="100%" height="100%">
@@ -29,13 +32,15 @@ const Login = () => {
           left="-50%"
           top="-80%"
         />
-        <AbsoluteBackground
-          background="url('/images/background_2.png')"
-          backgroundWidth="55%"
-          backgroundHeight="60%"
-          right="-20%"
-          bottom="-20%"
-        />
+        {isDesktop && (
+          <AbsoluteBackground
+            background="url('/images/background_2.png')"
+            backgroundWidth="55%"
+            backgroundHeight="60%"
+            right="-20%"
+            bottom="-20%"
+          />
+        )}
       </BackgroundContainer>
       <Container
         width="80%"
