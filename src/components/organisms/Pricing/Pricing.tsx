@@ -2,7 +2,6 @@ import React from "react";
 
 import { Container, Spacer } from "../../atoms";
 import { PriceCard } from "../../molecules";
-import { useResponsive } from "../../../hooks";
 
 import styled from "styled-components";
 
@@ -19,8 +18,6 @@ const PriceCardContainer = styled(Container)`
 `;
 
 const Pricing = () => {
-  const { isDesktop } = useResponsive();
-
   const features = [
     {
       name: "basic",
