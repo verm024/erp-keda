@@ -29,7 +29,7 @@ const Root = styled(Container)<Props>`
 `;
 
 const AbsoluteBackground = ({ ...rest }: Props) => {
-  return <Root {...rest} id="testtttt" />;
+  return <Root {...rest} />;
 };
 
 export default AbsoluteBackground;
