@@ -57,7 +57,7 @@ const Pricing = () => {
       width="width"
       minHeight="100vh"
       display="flex"
-      alignItems="center"
+      justifyContent="center"
       flexDirection="column"
     >
       <BackgroundContainer
@@ -68,13 +68,13 @@ const Pricing = () => {
       <PriceCardContainer width="100%" textAlign="center">
         {features.map((feature, index) => (
           <Container display="inline-block" key={index}>
-            <Spacer inline={isDesktop} size={16} />
+            <Spacer inline size={16} />
             <PriceCard
               level={feature.name}
               price={feature.price}
               features={feature.features}
             />
-            <Spacer inline={isDesktop} size={16} />
+            <Spacer inline size={16} />
           </Container>
         ))}
       </PriceCardContainer>

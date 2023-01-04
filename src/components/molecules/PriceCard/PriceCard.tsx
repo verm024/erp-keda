@@ -25,7 +25,7 @@ const FeatureLi = styled.li``;
 
 const PriceCard = ({ level, price, features = [] }: Props) => {
   return (
-    <Card display="inline-block">
+    <Card display="inline-block" margin="12px 0">
       <Container
         display="flex"
         flexDirection="column"
